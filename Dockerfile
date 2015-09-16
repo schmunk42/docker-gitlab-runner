@@ -6,6 +6,7 @@ RUN apt-get update && \
             rsync \
             curl \
             nano \
+            sshpass \
         --no-install-recommends && \
     rm -r /var/lib/apt/lists/* # 150901
 
