@@ -1,5 +1,9 @@
 # docker-gitlab-runner
 
+## Ressources
+
+- [Image on DockerHub](https://hub.docker.com/r/schmunk42/gitlab-runner/)
+
 ## Setup
 
 Connect to your runner host
