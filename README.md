@@ -1,8 +1,15 @@
 # docker-gitlab-runner
 
+This is a Gitlab runner with `docker-compose` support.
+
 ## Ressources
 
 - [Image on DockerHub](https://hub.docker.com/r/schmunk42/gitlab-runner/)
+
+## Requirements
+
+- `docker >= 1.9.0`
+- host-mounted Docker socket
 
 ## Setup
 
@@ -24,13 +31,13 @@ Start runner (only one)
       --privileged \
       -v `which docker`:/usr/bin/docker \
       -v /var/run/docker.sock:/var/run/docker.sock \
-      -v /srv/gitlab-runner/config:/etc/gitlab-runner \
-      -v /srv/gitlab-runner/builds:/root/builds \
-      schmunk42/gitlab-runner:latest
+      -v /home/gitlab-runner/config:/etc/gitlab-runner \
+      -v /home/gitlab-runner/builds:/home/gitlab-runner/builds \
+      schmunk42/gitlab-runner:2.1.0
 
 First time setup
 
-    edit /srv/gitlab-runner/config
+    edit /home/gitlab-runner/config
 
 Change `concurrent` setting.
 
