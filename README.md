@@ -2,6 +2,8 @@
 
 This is a Gitlab runner with `docker-compose` support.
 
+> :information_sign: You need to link the socket file or specify `DOCKER_HOST` 
+
 ## Ressources
 
 - [Image on DockerHub](https://hub.docker.com/r/schmunk42/gitlab-runner/)
