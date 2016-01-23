@@ -52,3 +52,7 @@ Debug commands
 Start runner instances (TODO: check, if they run in parallel)
 
     docker exec -it runner gitlab-runner register -e shell -u https://gitlab:443/ -r $CI_RUNNER_TOKEN -n
+
+---
+
+Built by [dmstr](http://diemeisterei.de)
