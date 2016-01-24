@@ -42,7 +42,7 @@ Start runner (only one)
       -v /var/run/docker.sock:/var/run/docker.sock \
       -v /home/gitlab-runner/config:/etc/gitlab-runner \
       -v /home/gitlab-runner/builds:/home/gitlab-runner/builds \
-      schmunk42/gitlab-runner:2.1.0
+      schmunk42/gitlab-runner:<VERSION>
 
 First time setup
 
