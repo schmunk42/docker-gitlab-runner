@@ -10,8 +10,15 @@ This is a Gitlab runner with `docker-compose` support.
 
 ## Requirements
 
-- `docker >= 1.9.0`
 - host-mounted Docker socket
+
+### 4.0.0 
+
+- `docker >= 1.10.0`
+
+### 1.0.0 - 3.0.0
+
+- `docker >= 1.9.0`
 
 ## Setup
 
