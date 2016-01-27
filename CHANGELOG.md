@@ -5,7 +5,7 @@ Changelog
 
 - GitLab runner 1.0.1
 - docker-compose 1.6.0-rc1
-- added Comodo certificate
+- added Comodo certificate ("fixes" https clone bug in CI)
 
 ### 4.0.0-beta1
 
