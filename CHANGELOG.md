@@ -1,6 +1,10 @@
 Changelog
 =========
 
+### dev
+
+- GitLab runner 1.0.2
+
 ### 4.0.0
 
 - GitLab runner 1.0.1
