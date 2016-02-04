@@ -1,6 +1,6 @@
 # docker-gitlab-runner
 
-This is a Gitlab runner with `docker-compose` support.
+This is a GitLab CI runner with `docker-compose` support.
 
 > :information_sign: You need to link the socket file or specify `DOCKER_HOST` 
 
