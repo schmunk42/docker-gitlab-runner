@@ -4,6 +4,11 @@ Changelog
 ### dev
 
 - GitLab runner 1.0.2
+- docker-compose 1.6.0
+
+### 4.0.2
+
+- GitLab runner 1.0.2
 - docker-compose 1.6.0-rc2
 
 ### 4.0.0
