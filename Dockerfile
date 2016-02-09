@@ -26,4 +26,8 @@ ENV TERM=linux
 RUN git config --global user.email "ci-runner@example.com" && \
     git config --global user.name "CI Runner"
 
+RUN wget https://github.com/Yelp/dumb-init/releases/download/v1.0.0/dumb-init_1.0.0_amd64.deb
+RUN dpkg -i dumb-init_*.deb
+
+ENTRYPOINT ["/usr/bin/dumb-init", "/entrypoint"]
 CMD ["run", "--user=root", "--working-directory=/home/gitlab-runner"]
