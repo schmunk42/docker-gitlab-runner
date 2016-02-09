@@ -12,9 +12,13 @@ This is a GitLab CI runner with `docker-compose` support.
 
 - host-mounted Docker socket
 
-### 4.0.0 
+### 4.1.x 
 
 - `docker >= 1.10.0`
+
+### 4.0.x 
+
+- `docker >= 1.9.0`
 
 ### 1.0.0 - 3.0.0
 
