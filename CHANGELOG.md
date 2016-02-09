@@ -1,6 +1,10 @@
 Changelog
 =========
 
+### dev
+
+- docker (client) 1.10.0
+
 ### 4.1.0
 
 - GitLab runner 1.0.2
