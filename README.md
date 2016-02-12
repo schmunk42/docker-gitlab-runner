@@ -35,12 +35,12 @@ Get token from *CI runners page* (/admin/runners).
 
 Set variables
 
-    export CI_RUNNER_TOKEN=508a8a6dcc9f3be6ba40
+    export CI_RUNNER_TOKEN=<ENTER-YOUR-TOKEN-HERE>
 
 Start runner (only one)
 
     docker run -d \
-        --name runner-${RUNNER_VERSION} \
+        --name runner \
         --restart always \
         -v /var/run/docker.sock:/var/run/docker.sock \
         -v /home/gitlab-runner/config:/etc/gitlab-runner \
