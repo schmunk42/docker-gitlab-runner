@@ -11,7 +11,7 @@ This is a GitLab CI runner with `docker-compose` support.
 
 - host-mounted Docker socket 
 
-**:warning: It is strongly recommended to run to this *runner* on a separate Docker host VM.**
+**:warning: It is strongly recommended to run this *runner* on a separate Docker host VM.** For some more details why, please read [this blog posting](http://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/).
 
 ### 4.1.x 
 
