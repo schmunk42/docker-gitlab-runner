@@ -66,7 +66,7 @@ Start runner instances (TODO: check, if they run in parallel)
     docker exec -it runner gitlab-runner \
         register \
             --executor shell \
-            -u https://my.gitlab.server:443/ \
+            -u https://my.gitlab.server:443/ci \
             -r ${CI_RUNNER_TOKEN} \
             -n
 
