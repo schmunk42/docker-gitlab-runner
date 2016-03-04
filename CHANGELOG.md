@@ -1,6 +1,12 @@
 Changelog
 =========
 
+### 4.2.0-rc2
+
+- docker (client) 1.10.2
+- docker-compose 1.6.2
+- GitLab runner 1.0.4
+
 ### 4.2.0-rc1
 
 - docker (client) 1.10.0

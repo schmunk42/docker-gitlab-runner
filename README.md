@@ -67,7 +67,7 @@ Start runner instances (TODO: check, if they run in parallel)
         register \
             --executor shell \
             -u https://my.gitlab.server:443/ci \
-            -r ${CI_RUNNER_TOKEN} \
+            -r ${RUNNER_TOKEN} \
             -n
 
 ---
