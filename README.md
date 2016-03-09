@@ -70,6 +70,14 @@ Start runner instances (TODO: check, if they run in parallel)
             -r ${RUNNER_TOKEN} \
             -n
 
+## Building the image
+
+    docker build --pull -t local/runner .
+
+Check version of runner    
+    
+    docker run local/runner -v 
+
 ---
 
 Built by [dmstr](http://diemeisterei.de)

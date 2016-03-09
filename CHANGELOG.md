@@ -1,6 +1,10 @@
 Changelog
 =========
 
+### 4.3.0-beta1
+
+- removed dumb init
+
 ### 4.2.0-rc2
 
 - docker (client) 1.10.2
