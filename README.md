@@ -4,8 +4,8 @@ This is a GitLab CI runner with `docker-compose` support.
 
 ## Ressources
 
-- [Image on DockerHub](https://hub.docker.com/r/schmunk42/gitlab-runner/)
-- [Base GitLab Runner](https://gitlab.com/gitlab-org/gitlab-ci-multi-runner)
+- Docker-Compose Runner ([Image](https://hub.docker.com/r/schmunk42/gitlab-runner/), [Source](https://github.com/schmunk42/docker-gitlab-runner))
+- Base GitLab Runner ([Image](https://hub.docker.com/r/gitlab/gitlab-runner/), [Source](https://gitlab.com/gitlab-org/gitlab-ci-multi-runner))
 
 ## Requirements
 
