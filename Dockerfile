@@ -23,6 +23,9 @@ RUN curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-com
 
 ENV TERM=linux
 
+RUN wget https://github.com/Yelp/dumb-init/releases/download/v1.0.0/dumb-init_1.0.0_amd64.deb
+RUN dpkg -i dumb-init_*.deb
+
 RUN git config --global user.email "ci-runner@example.com" && \
     git config --global user.name "CI Runner"
 
