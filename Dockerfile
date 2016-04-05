@@ -1,4 +1,4 @@
-FROM gitlab/gitlab-runner:latest
+FROM gitlab/gitlab-runner:v1.1.0
 
 RUN apt-get update && \
     apt-get -y install \
