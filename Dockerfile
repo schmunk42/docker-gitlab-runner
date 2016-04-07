@@ -1,5 +1,7 @@
 FROM gitlab/gitlab-runner:v1.1.0
 
+RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+
 RUN apt-get update && \
     apt-get -y install \
             make \
@@ -7,8 +9,11 @@ RUN apt-get update && \
             curl \
             nano \
             sshpass \
+            git-lfs \
         --no-install-recommends && \
     rm -r /var/lib/apt/lists/* # 150901
+
+RUN git lfs install
 
 # add missing SSL certificate https://bugs.launchpad.net/ubuntu/+source/ca-certificates/+bug/1261855
 RUN curl -o /usr/local/share/ca-certificates/como.crt \
