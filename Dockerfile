@@ -20,11 +20,13 @@ RUN curl -o /usr/local/share/ca-certificates/como.crt \
       https://gist.githubusercontent.com/schmunk42/5abeaf7ca468dc259325/raw/2a8e19139d29aeea2871206576e264ef2d45a46d/comodorsadomainvalidationsecureserverca.crt \
  && update-ca-certificates
 
-RUN curl -L https://get.docker.com/builds/Linux/x86_64/docker-1.10.2 > /usr/local/bin/docker && \
+RUN curl -L https://get.docker.com/builds/Linux/x86_64/docker-1.10.3 > /usr/local/bin/docker && \
     chmod +x /usr/local/bin/docker
 
 RUN curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose && \
     chmod +x /usr/local/bin/docker-compose
+RUN curl -L https://github.com/docker/compose/releases/download/1.7.0-rc1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose-1.7.0-rc1 && \
+    chmod +x /usr/local/bin/docker-compose-1.7.0-rc1
 
 ENV TERM=linux
 
