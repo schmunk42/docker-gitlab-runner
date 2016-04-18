@@ -1,4 +1,4 @@
-FROM gitlab/gitlab-runner:v1.1.0
+FROM gitlab/gitlab-runner:v1.1.3
 
 RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 
@@ -20,10 +20,10 @@ RUN curl -o /usr/local/share/ca-certificates/como.crt \
       https://gist.githubusercontent.com/schmunk42/5abeaf7ca468dc259325/raw/2a8e19139d29aeea2871206576e264ef2d45a46d/comodorsadomainvalidationsecureserverca.crt \
  && update-ca-certificates
 
-RUN curl -L https://get.docker.com/builds/Linux/x86_64/docker-1.10.2 > /usr/local/bin/docker && \
+RUN curl -L https://get.docker.com/builds/Linux/x86_64/docker-1.11.0 > /usr/local/bin/docker && \
     chmod +x /usr/local/bin/docker
 
-RUN curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose && \
+RUN curl -L https://github.com/docker/compose/releases/download/1.7.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose && \
     chmod +x /usr/local/bin/docker-compose
 
 ENV TERM=linux
