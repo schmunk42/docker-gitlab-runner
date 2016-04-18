@@ -25,6 +25,8 @@ RUN curl -L https://get.docker.com/builds/Linux/x86_64/docker-1.11.0 > /usr/loca
 
 RUN curl -L https://github.com/docker/compose/releases/download/1.7.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose && \
     chmod +x /usr/local/bin/docker-compose
+RUN curl -L https://github.com/docker/compose/releases/download/1.7.0-rc1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose-1.7.0-rc1 && \
+    chmod +x /usr/local/bin/docker-compose-1.7.0-rc1
 
 ENV TERM=linux
 
