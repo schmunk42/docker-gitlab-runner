@@ -1,9 +1,23 @@
 Changelog
 =========
 
-### 4.3.0-beta1
+### 4.5.0-dev
 
-- removed dumb init
+- GitLab runner 1.1.3
+- docker-compose 1.7.0
+- docker (client) 1.11.0
+
+### 4.4.1
+
+- git-lfs support
+
+### 4.4.0
+
+- GitLab runner 1.1.0
+
+### 4.3.0
+
+- dumb init (debugging)
 
 ### 4.2.0-rc2
 
