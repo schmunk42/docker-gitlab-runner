@@ -20,6 +20,12 @@ RUN curl -o /usr/local/share/ca-certificates/como.crt \
       https://gist.githubusercontent.com/schmunk42/5abeaf7ca468dc259325/raw/2a8e19139d29aeea2871206576e264ef2d45a46d/comodorsadomainvalidationsecureserverca.crt \
  && update-ca-certificates
 
+RUN curl -L https://get.docker.com/builds/Linux/x86_64/docker-1.9.1 > /opt/local/bin/docker-1.9.1 && \
+    chmod +x /usr/local/bin/docker-1.9.1
+    
+RUN curl -L https://get.docker.com/builds/Linux/x86_64/docker-1.10.3 > /opt/local/bin/docker-1.10.3 && \
+    chmod +x /usr/local/bin/docker-1.10.3
+
 RUN curl -L https://get.docker.com/builds/Linux/x86_64/docker-1.11.0.tgz > /tmp/docker-1.11.0.tgz && \
     cd /tmp && tar -xzf ./docker-1.11.0.tgz && \
     rm /tmp/docker-1.11.0.tgz && \
