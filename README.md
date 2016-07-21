@@ -25,6 +25,8 @@ This is a GitLab CI runner with `docker-compose` support.
 
 - `docker >= 1.9.0`
 
+See also [CHANGELOG](CHANGELOG.md)
+
 ## Setup
 
 Connect to your runner host
