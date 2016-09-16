@@ -13,7 +13,7 @@ This is a GitLab CI runner with `docker-compose` support.
 
 **:warning: It is strongly recommended to run this *runner* on a separate Docker host VM.** For some more details why and why this is not using Docker-in-Docker, please read [this blog posting](http://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/).
 
-### 4.1.x 
+### >= 4.1.0
 
 - `docker >= 1.10.0`
 
@@ -25,7 +25,7 @@ This is a GitLab CI runner with `docker-compose` support.
 
 - `docker >= 1.9.0`
 
-See also [CHANGELOG](CHANGELOG.md)
+See also [CHANGELOG](CHANGELOG.md) for versions of `docker` and `docker-compose` on this image.
 
 ## Setup
 
