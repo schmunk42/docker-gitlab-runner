@@ -1,7 +1,13 @@
 Changelog
 =========
 
-### 4.6.0-alpha2
+### 4.7.0-beta1
+
+- GitLab runner 1.7.1
+- docker-compose **1.8.1**, 1.7.1
+- docker (client) **1.12.3**
+
+### 4.6.0, 4.6.0-alpha2
 
 - GitLab runner 1.5.3
 - dumb_init 1.0.2 (from base-image)

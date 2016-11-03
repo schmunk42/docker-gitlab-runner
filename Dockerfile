@@ -1,4 +1,4 @@
-FROM gitlab/gitlab-runner:v1.5.3
+FROM gitlab/gitlab-runner:v1.7.1
 
 RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 
@@ -35,19 +35,19 @@ RUN curl -L https://get.docker.com/builds/Linux/x86_64/docker-1.11.2.tgz > /tmp/
     mv /tmp/docker/docker /usr/local/bin/docker-1.11.2 && \
     chmod +x /usr/local/bin/docker-1.11.2
 
-RUN curl -L https://github.com/docker/compose/releases/download/1.8.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose-1.8.0 && \
-    chmod +x /usr/local/bin/docker-compose-1.8.0
+RUN curl -L https://github.com/docker/compose/releases/download/1.8.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose-1.8.1 && \
+    chmod +x /usr/local/bin/docker-compose-1.8.1
 
 #
-RUN curl -L https://get.docker.com/builds/Linux/x86_64/docker-1.12.1.tgz > /tmp/docker-1.12.1.tgz && \
-    cd /tmp && tar -xzf ./docker-1.12.1.tgz && \
-    rm /tmp/docker-1.12.1.tgz && \
-    mv /tmp/docker/docker /usr/local/bin/docker-1.12.1 && \
-    chmod +x /usr/local/bin/docker-1.12.1
+RUN curl -L https://get.docker.com/builds/Linux/x86_64/docker-1.12.3.tgz > /tmp/docker-1.12.3.tgz && \
+    cd /tmp && tar -xzf ./docker-1.12.3.tgz && \
+    rm /tmp/docker-1.12.3.tgz && \
+    mv /tmp/docker/docker /usr/local/bin/docker-1.12.3 && \
+    chmod +x /usr/local/bin/docker-1.12.3
 
 # Link default versions
-RUN ln -s /usr/local/bin/docker-1.12.1 /usr/local/bin/docker && \
-    ln -s /usr/local/bin/docker-compose-1.8.0 /usr/local/bin/docker-compose
+RUN ln -s /usr/local/bin/docker-1.12.3 /usr/local/bin/docker && \
+    ln -s /usr/local/bin/docker-compose-1.8.1 /usr/local/bin/docker-compose
 
 ENV TERM=linux
 
