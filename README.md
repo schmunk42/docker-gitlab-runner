@@ -48,7 +48,9 @@ Start runner (only one)
         -v /home/gitlab-runner/config:/etc/gitlab-runner \
         -v /home/gitlab-runner/builds:/home/gitlab-runner/builds \
         schmunk42/gitlab-runner:4.2.0-rc1
-    
+
+> :warning: It is very important to mount `/home/gitlab-runner` to the same path inside the runner container.
+
 First time setup
 
     edit /home/gitlab-runner/config
