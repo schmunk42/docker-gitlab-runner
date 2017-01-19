@@ -1,6 +1,12 @@
 Changelog
 =========
 
+### 4.7.0-rc1
+
+- GitLab runner 1.9.4
+- docker-compose **1.8.1**, 1.7.1
+- docker (client) **1.12.6**
+
 ### 4.7.0-beta1
 
 - GitLab runner 1.7.1

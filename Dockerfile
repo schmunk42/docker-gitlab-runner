@@ -1,4 +1,4 @@
-FROM gitlab/gitlab-runner:v1.7.1
+FROM gitlab/gitlab-runner:v1.9.4
 
 RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 
@@ -40,14 +40,14 @@ RUN curl -L https://get.docker.com/builds/Linux/x86_64/docker-1.11.2.tgz > /tmp/
 RUN curl -L https://github.com/docker/compose/releases/download/1.8.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose-1.8.1 && \
     chmod +x /usr/local/bin/docker-compose-1.8.1
 
-RUN curl -L https://get.docker.com/builds/Linux/x86_64/docker-1.12.3.tgz > /tmp/docker-1.12.3.tgz && \
-    cd /tmp && tar -xzf ./docker-1.12.3.tgz && \
-    rm /tmp/docker-1.12.3.tgz && \
-    mv /tmp/docker/docker /usr/local/bin/docker-1.12.3 && \
-    chmod +x /usr/local/bin/docker-1.12.3
+RUN curl -L https://get.docker.com/builds/Linux/x86_64/docker-1.12.6.tgz > /tmp/docker-1.12.6.tgz && \
+    cd /tmp && tar -xzf ./docker-1.12.6.tgz && \
+    rm /tmp/docker-1.12.6.tgz && \
+    mv /tmp/docker/docker /usr/local/bin/docker-1.12.6 && \
+    chmod +x /usr/local/bin/docker-1.12.6
 
 # Link default versions
-RUN ln -s /usr/local/bin/docker-1.12.3 /usr/local/bin/docker && \
+RUN ln -s /usr/local/bin/docker-1.12.6 /usr/local/bin/docker && \
     ln -s /usr/local/bin/docker-compose-1.8.1 /usr/local/bin/docker-compose
 
 ENV TERM=linux
