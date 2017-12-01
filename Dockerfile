@@ -1,4 +1,4 @@
-FROM gitlab/gitlab-runner:v9.5.0
+FROM gitlab/gitlab-runner:v10.2.0
 
 RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 
