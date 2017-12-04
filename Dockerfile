@@ -1,8 +1,9 @@
-FROM gitlab/gitlab-runner:v9.5.0
+FROM gitlab/gitlab-runner:v10.2.0
 
 RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 
-RUN apt-get update && \
+RUN export DEBIAN_FRONTEND=noninteractive && \
+    apt-get update && \
     apt-get -y install \
             make \
             rsync \
@@ -11,6 +12,7 @@ RUN apt-get update && \
             sshpass \
             git-lfs \
         --no-install-recommends && \
+    apt-get -y clean && \
     rm -r /var/lib/apt/lists/* # 150901
 
 RUN git lfs install
@@ -32,9 +34,9 @@ RUN curl -L https://get.docker.com/builds/Linux/x86_64/docker-1.10.3 > /usr/loca
 
 RUN curl -L https://get.docker.com/builds/Linux/x86_64/docker-1.11.2.tgz > /tmp/docker-1.11.2.tgz && \
     cd /tmp && tar -xzf ./docker-1.11.2.tgz && \
-    rm /tmp/docker-1.11.2.tgz && \
     mv /tmp/docker/docker /usr/local/bin/docker-1.11.2 && \
-    chmod +x /usr/local/bin/docker-1.11.2
+    chmod +x /usr/local/bin/docker-1.11.2 && \
+    rm -rf /tmp/docker*
 
 # up to version 4.7
 RUN curl -L https://github.com/docker/compose/releases/download/1.8.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose-1.8.1 && \
@@ -42,18 +44,19 @@ RUN curl -L https://github.com/docker/compose/releases/download/1.8.1/docker-com
 
 RUN curl -L https://get.docker.com/builds/Linux/x86_64/docker-1.12.6.tgz > /tmp/docker-1.12.6.tgz && \
     cd /tmp && tar -xzf ./docker-1.12.6.tgz && \
-    rm /tmp/docker-1.12.6.tgz && \
     mv /tmp/docker/docker /usr/local/bin/docker-1.12.6 && \
-    chmod +x /usr/local/bin/docker-1.12.6
+    chmod +x /usr/local/bin/docker-1.12.6 && \
+    rm -rf /tmp/docker*
 
 # version 5.0
 ENV DOCKER_VERSION_CURRENT=17.06.1-ce \
     COMPOSE_VERSION_CURRENT=1.15.0
 RUN curl -L https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKER_VERSION_CURRENT}.tgz > /tmp/docker-${DOCKER_VERSION_CURRENT}.tgz && \
     cd /tmp && tar -xzf ./docker-${DOCKER_VERSION_CURRENT}.tgz && \
-    rm /tmp/docker-${DOCKER_VERSION_CURRENT}.tgz && \
     mv /tmp/docker/docker /usr/local/bin/docker-${DOCKER_VERSION_CURRENT} && \
-    chmod +x /usr/local/bin/docker-${DOCKER_VERSION_CURRENT}
+    chmod +x /usr/local/bin/docker-${DOCKER_VERSION_CURRENT} && \
+    rm -rf /tmp/docker*
+
 RUN curl -L https://github.com/docker/compose/releases/download/${COMPOSE_VERSION_CURRENT}/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose-${COMPOSE_VERSION_CURRENT} && \
     chmod +x /usr/local/bin/docker-compose-${COMPOSE_VERSION_CURRENT}
 
