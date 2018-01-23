@@ -1,7 +1,7 @@
 Changelog
 =========
 
-### dev
+### 5.1.0
 
 - GitLab runner **10.4.0**
 - docker-compose **1.18.0**
