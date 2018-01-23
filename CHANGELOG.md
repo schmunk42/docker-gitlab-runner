@@ -1,6 +1,22 @@
 Changelog
 =========
 
+### dev
+
+- GitLab runner **10.4.0**
+- docker-compose **1.18.0**
+- docker (client) **17.12.0-ce**
+
+### 5.0.0
+
+- GitLab runner **10.2.0**
+
+### 5.0.0-alpha1
+
+- GitLab runner **9.5.0**
+- docker-compose **1.15.0**
+- docker (client) **17.06.1-ce**
+
 ### 4.7.0-rc1
 
 - GitLab runner 1.9.4

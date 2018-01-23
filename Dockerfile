@@ -1,4 +1,4 @@
-FROM gitlab/gitlab-runner:v10.2.0
+FROM gitlab/gitlab-runner:v10.4.0
 
 RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 
@@ -49,8 +49,8 @@ RUN curl -L https://get.docker.com/builds/Linux/x86_64/docker-1.12.6.tgz > /tmp/
     rm -rf /tmp/docker*
 
 # version 5.0
-ENV DOCKER_VERSION_CURRENT=17.06.1-ce \
-    COMPOSE_VERSION_CURRENT=1.15.0
+ENV DOCKER_VERSION_CURRENT=17.12.0-ce \
+    COMPOSE_VERSION_CURRENT=1.18.0
 RUN curl -L https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKER_VERSION_CURRENT}.tgz > /tmp/docker-${DOCKER_VERSION_CURRENT}.tgz && \
     cd /tmp && tar -xzf ./docker-${DOCKER_VERSION_CURRENT}.tgz && \
     mv /tmp/docker/docker /usr/local/bin/docker-${DOCKER_VERSION_CURRENT} && \
