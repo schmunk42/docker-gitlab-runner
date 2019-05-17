@@ -1,6 +1,13 @@
 Changelog
 =========
 
+### 6.0.0-rc1
+
+- GitLab runner **11.10.1**
+- docker-compose **1.24.0**
+- docker (client) **18.09.6**
+- removed legacy versions of docker tools
+
 ### 5.1.0
 
 - GitLab runner **10.4.0**

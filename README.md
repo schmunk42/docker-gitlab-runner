@@ -1,6 +1,6 @@
 # docker-gitlab-runner
 
-This is a GitLab CI runner with `docker-compose` support.
+This is a GitLab CI runner with `docker-compose` and *git-lfs* support.
 
 ## Resources
 
