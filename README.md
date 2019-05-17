@@ -7,13 +7,16 @@ This is a GitLab CI runner with `docker-compose` and *git-lfs* support.
 - Docker-Compose Runner ([Image](https://hub.docker.com/r/schmunk42/gitlab-runner/), [Source](https://github.com/schmunk42/docker-gitlab-runner))
 - Base GitLab Runner ([Image](https://hub.docker.com/r/gitlab/gitlab-runner/), [Source](https://gitlab.com/gitlab-org/gitlab-ci-multi-runner))
 
+## :warning: Important information
+
+**It is strongly recommended to run this *runner* on a separate Docker host VM.** For some more details why and why this is not using Docker-in-Docker, please read [this blog posting](http://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/).
+
+**We recommend running this runner only in non-public environments**, see https://github.com/schmunk42/docker-gitlab-runner/issues/4 for details. 
+
+
 ## Requirements
 
 - host-mounted Docker socket 
-
-**:warning: It is strongly recommended to run this *runner* on a separate Docker host VM.** For some more details why and why this is not using Docker-in-Docker, please read [this blog posting](http://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/).
-
-**We recommend running this runner only in non-public environments**, see https://github.com/schmunk42/docker-gitlab-runner/issues/4 for details. 
 
 ### >= 4.1.0
 
