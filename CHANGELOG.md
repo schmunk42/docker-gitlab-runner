@@ -1,6 +1,17 @@
 Changelog
 =========
 
+### 8.0.0-beta1
+
+- GitLab runner **15.10.1**
+- docker-compose **2.17.2**
+- docker (client) **23.0.4**
+- removed custom git-lfs script
+
+### 7.0.0-rc1
+
+tbd
+
 ### 6.0.0-rc1
 
 - GitLab runner **11.10.1**
