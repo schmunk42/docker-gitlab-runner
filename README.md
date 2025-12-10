@@ -87,6 +87,13 @@ Check version of runner
     
     docker run local/runner -v 
 
+### Debug commands
+
+    docker-compose run --rm --entrypoint bash runner
+
+    docker-compose run --rm --entrypoint bash runner -c "docker --version"
+    docker-compose run --rm --entrypoint bash runner -c "docker-compose --version"
+
 ---
 
 Built by [dmstr](http://diemeisterei.de)

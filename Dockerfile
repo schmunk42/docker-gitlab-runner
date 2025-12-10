@@ -35,7 +35,7 @@ RUN curl -L https://download.docker.com/linux/static/stable/x86_64/docker-${DOCK
     chmod +x /usr/local/bin/docker-${DOCKER_VERSION_CURRENT} && \
     rm -rf /tmp/docker*
 
-RUN curl -L https://github.com/docker/compose/releases/download/${COMPOSE_VERSION_CURRENT}/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose-${COMPOSE_VERSION_CURRENT} && \
+RUN curl -L https://github.com/docker/compose/releases/download/v${COMPOSE_VERSION_CURRENT}/docker-compose-linux-x86_64 > /usr/local/bin/docker-compose-${COMPOSE_VERSION_CURRENT} && \
     chmod +x /usr/local/bin/docker-compose-${COMPOSE_VERSION_CURRENT}
 
 # Link default versions
