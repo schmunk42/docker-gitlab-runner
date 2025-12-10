@@ -27,8 +27,8 @@ RUN curl -o /usr/local/share/ca-certificates/como.crt \
       https://gist.githubusercontent.com/schmunk42/5abeaf7ca468dc259325/raw/2a8e19139d29aeea2871206576e264ef2d45a46d/comodorsadomainvalidationsecureserverca.crt \
  && update-ca-certificates
 
-ENV DOCKER_VERSION_CURRENT=23.0.4 \
-    COMPOSE_VERSION_CURRENT=v2.17.2
+ENV DOCKER_VERSION_CURRENT=29.1.2  \
+    COMPOSE_VERSION_CURRENT=2.40.3
 RUN curl -L https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKER_VERSION_CURRENT}.tgz > /tmp/docker-${DOCKER_VERSION_CURRENT}.tgz && \
     cd /tmp && tar -xzf ./docker-${DOCKER_VERSION_CURRENT}.tgz && \
     mv /tmp/docker/docker /usr/local/bin/docker-${DOCKER_VERSION_CURRENT} && \
